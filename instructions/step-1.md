@@ -104,7 +104,7 @@ DROP KEYSPACE imdb;
 
 Nous allons à présent créer une table `movies` :
 
-```
+```sql
 CREATE TABLE imdb.movies (
   title text PRIMARY KEY,
   director text,
@@ -126,14 +126,14 @@ Les types disponibles sont très proches des types qu'on trouve dans le monde re
 
 A tout moment, vous pouvez supprimer la table à l'aide de la commande suivante :
 
-```
+```sql
 DROP TABLE imdb.movies ;
 ```
 
 ### Insertion de données
 Nous allons à présent insérer des données dans Cassandra :
 
-```
+```sql
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Shawshank Redemption', 'Frank Darabont',	1994,	1, 9.2, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Godfather', 'Francis Ford Coppola', 1972, 2, 9.2, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Godfather: Part II', 'Francis Ford Coppola', 1974, 3, 9, {'Crime', 'Drama'});
@@ -147,25 +147,25 @@ INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('S
 
 Nous allons à présent requêter la base de données :
 
-```
+```sql
 SELECT * FROM imdb.movies;
 ```
 
 Comme en SQL, nous pouvons ajouter des conditions :
 
-```
+```sql
 SELECT * FROM imdb.movies WHERE title = '12 Angry Men';
 ```
 
 Ou effectuer des projections :
 
-```
+```sql
 SELECT title, rank FROM imdb.movies;
 ```
 
 Ou encore utiliser des fonctions d'agrégation :
 
-```
+```sql
 SELECT count(*) FROM imdb.movies;
 ```
 
@@ -173,12 +173,12 @@ SELECT count(*) FROM imdb.movies;
 
 Il est possible d'updater les données de la manière suivante :
 
-```
+```sql
 UPDATE imdb.movies SET year = 1993 WHERE title = 'Pulp Fiction';
 ```
 
 Mise à jour d'un set :
-```
+```sql
 UPDATE imdb.movies SET genres = genres + {'Polar'} WHERE title = 'Pulp Fiction';
 ```
 
@@ -186,13 +186,13 @@ UPDATE imdb.movies SET genres = genres + {'Polar'} WHERE title = 'Pulp Fiction';
 
 Vous pouvez supprimer les données de la manière suivante :
 
-```
+```sql
 DELETE from imdb.movies;
 ```
 
 Ou avec une condition :
 
-```
+```sql
 DELETE from imdb.movies WHERE title = '12 Angry Men';
 ```
 
@@ -201,7 +201,7 @@ DELETE from imdb.movies WHERE title = '12 Angry Men';
 
 Essayez les requêtes suivantes :
 
-```
+```sql
 SELECT * FROM imdb.movies WHERE year = 1994;
 SELECT * FROM imdb.movies WHERE title = '12 Angry Men' and year = 1957;
 ```
@@ -212,7 +212,7 @@ Nous ne pouvons ajouter des conditions que sur l'attribut `title` qui fait parti
 
 Recommencez en changeant la description de la table `movies` :
 
-```
+```sql
 CREATE TABLE imdb.movies (
   title text,
   director text,
@@ -226,7 +226,7 @@ CREATE TABLE imdb.movies (
 
 A présent nous pouvons exécuter les requêtes suivantes :
 
-```
+```sql
 SELECT * FROM imdb.movies WHERE year = 1994;
 SELECT * FROM imdb.movies WHERE year = 1994 ORDER BY rank DESC;
 SELECT * FROM imdb.movies WHERE year = 1994 AND rank = 1;
@@ -235,7 +235,7 @@ SELECT * FROM imdb.movies WHERE year = 1994 AND rank <= 3;
 
 Cool, on est tirés d'affaire, on peut réexécuter la requête suivante :
 
-```
+```sql
 SELECT * FROM imdb.movies WHERE title = '12 Angry Men';
 SELECT * FROM imdb.movies WHERE rank = 1;
 ```
@@ -243,7 +243,7 @@ SELECT * FROM imdb.movies WHERE rank = 1;
 Ah bah non ... :disappointed:
 
 Dans **Cassandra**, vous devez écrire les données de la manière dont vous allez les lire. Il n'est pas rare de trouver ce type de modélisations :
-```
+```sql
 CREATE TABLE imdb.movies_by_title (
   title text,
   director text,
@@ -257,13 +257,13 @@ CREATE TABLE imdb.movies_by_title (
 
 Qu'optenez-vous lorsque vous exécutez la requête suivante ?
 
-```
+```sql
 SELECT * FROM imdb.movies_by_title WHERE title = '12 Angry Men';
 ```
 
 Comment modéliser vos données pour pouvoir servir la requête suivnate ?
 
-```
+```sql
 SELECT * FROM imdb.movies WHERE rank = 1;
 ```
 
