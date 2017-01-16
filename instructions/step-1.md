@@ -190,6 +190,12 @@ Vous pouvez supprimer les données de la manière suivante :
 DELETE from imdb.movies;
 ```
 
+Ou avec la commande `TRUNCATE` :  
+
+```sql
+TRUNCATE imdb.movies;
+```
+
 Ou avec une condition :
 
 ```sql
