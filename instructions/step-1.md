@@ -187,7 +187,7 @@ UPDATE imdb.movies SET genres = genres + {'Polar'} WHERE title = 'Pulp Fiction';
 Vous pouvez supprimer les données de la manière suivante :
 
 ```sql
-DELETE from imdb.movies;
+TRUNCATE imdb.movies;
 ```
 
 Ou avec une condition :
