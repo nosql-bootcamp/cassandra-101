@@ -261,7 +261,7 @@ Qu'optenez-vous lorsque vous exécutez la requête suivante ?
 SELECT * FROM imdb.movies_by_title WHERE title = '12 Angry Men';
 ```
 
-Comment modéliser vos données pour pouvoir servir la requête suivnate ?
+Comment modéliser vos données pour pouvoir servir la requête suivante ?
 
 ```sql
 SELECT * FROM imdb.movies WHERE rank = 1;
