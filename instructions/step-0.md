@@ -17,6 +17,8 @@ Si souhaitez vous passer de **Python**, vous pouvez installer Datastax DevCenter
 
 Téléchargez la dernière version de **Cassandra** à l'adresse suivante : http://cassandra.apache.org/download/. **Privilégiez la version `tar.gz`.**
 
+Pour Windows : https://academy.datastax.com/planet-cassandra//cassandra
+
 Ce workshop est basé sur la version `3.9`.
 
 Pour installer Cassandra, dézippez l'archive dans le dossier de votre choix, par exemple `~/progs/apache-cassandra-3.9`.
