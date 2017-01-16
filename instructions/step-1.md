@@ -140,7 +140,7 @@ INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('T
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('Pulp Fiction', 'Quentin Tarantino', 1994, 4, 8.9, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Good, the Bad and the Ugly', 'Sergio Leone', 1966, 5, 8.9, {'Western'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('12 Angry Men', 'Sidney Lumet', 1957, 6, 8.9, {'Crime' ,'Drama'});
-INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('Schindler's List', 'Steven Spielberg',	1993,	7, 8.9, {'Biography', 'Drama', 'History'});
+INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('Schindler''s List', 'Steven Spielberg',	1993,	7, 8.9, {'Biography', 'Drama', 'History'});
 ```
 
 ### Requêtes
