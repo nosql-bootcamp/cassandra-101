@@ -1,6 +1,5 @@
 # Installation
-N
-ous allons maintenant installer Cassandra.
+Nous allons maintenant installer Cassandra.
 
 ## Java
 
