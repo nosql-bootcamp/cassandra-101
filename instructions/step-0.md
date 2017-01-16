@@ -41,4 +41,4 @@ DESCRIBE keyspaces;
 
 ## Next
 
-Vous pouvez passer à l'étape suivante : * Étape 1 - [Prise en main](./images/step-1.md)
+Vous pouvez passer à l'étape suivante : * Étape 1 - [Prise en main](./step-1.md)
