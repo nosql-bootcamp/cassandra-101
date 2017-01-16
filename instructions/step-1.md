@@ -26,7 +26,7 @@ La cohérence de lecture est paramétrable pour chaque opération de lecture ou 
 
 * **ONE** : l'écriture est acquittée lorsqu'**une seule** copie des données est écrite
 * **QUORUM** : l'écriture est acquittée lorsqu'**une majorité** de copies des données est écrite
-* **QUORUM** : l'écriture est acquittée lorsque **la totalité** de copies des données est écrite
+* **ALL** : l'écriture est acquittée lorsque **la totalité** des copies des données est écrite
 
 Les performances d'écriture sont bien évidemment impactées directement par le nombre de copies écrites.
 
