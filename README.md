@@ -32,6 +32,6 @@ Quelques cas d'utilisation pour lesquels les bases de données orientées colonn
 
 ## Liens utiles
 
-* Site officiel : https://www.elastic.co
+* Site officiel : http://cassandra.apache.org/
 * Le site de Datastax : http://www.datastax.com/
-* La documentation officielle : https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+* La documentation officielle : http://cassandra.apache.org/doc/latest/
