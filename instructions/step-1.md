@@ -272,5 +272,5 @@ SELECT * FROM imdb.movies WHERE rank = 1;
 D'autres éléments pour débuter avec **Cassandra** :
 
 * Les vues matérialisées http://docs.datastax.com/en/cql/3.3/cql/cql_using/useCreateMV.html
-* Les index **Attention !!!!** : http://docs.datastax.com/en/cql/3.3/cql/cql_using/useCreateQueryIndexes.html
+* Les index **Attention !!!!** : https://docs.datastax.com/en/cql/3.3/cql/cql_reference/cqlCreateIndex.html
 * Les données temporaires avec le Time-To-Live (**TTL**) http://docs.datastax.com/en/cql/3.3/cql/cql_using/useTTL.html
