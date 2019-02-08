@@ -32,8 +32,8 @@ Les performances d'écriture sont bien évidemment impactées directement par le
 
 Pour que les opérations d'écriture et de lecture soient cohérentes, veillez à respecter le principe suivant :
 ```
-  Soit W le nombre de réplique écrites
-  Soit R le nombre de réplique lues
+  Soit W le nombre de répliques écrites
+  Soit R le nombre de répliques lues
   Soit RF le Replication Factor
   W + R > RF
 ```
@@ -51,7 +51,7 @@ Proche du concept de schéma pour une base de données relationnelle, la notion 
 
 ### Table
 
-Les `tables` (aussi appelées **Column Families**) sont les entités qui permettent de stocker les données. Les tables contiennent des lignes (**`rows`**). Une `row` est composé d'une clé et d'un ensemble de colonnes.
+Les `tables` (aussi appelées **Column Families**) sont les entités qui permettent de stocker les données. Les tables contiennent des lignes (**`rows`**). Une `row` est composée d'une clé et d'un ensemble de colonnes.
 
 ![](./images/table.png)
 
@@ -120,27 +120,27 @@ Les types disponibles sont très proches des types qu'on trouve dans le monde re
 * **list** : liste de valeurs au format ['value1', 'value2', 'value3']
 * **set** : set de valeurs au format {'value1', 'value2', 'value3'}
 * **map** : map de valeurs au format {'key1':'value1', 'key2':'value2', 'key3':'value3'}
-* **tuple** : ensemble de valeurs de type hétérogène au format ('val1', val2, val3)
+* **tuple** : ensemble de valeurs de type hétérogène au format ('val1', 'val2', 'val3')
 
 ### Suppression de la table
 
 A tout moment, vous pouvez supprimer la table à l'aide de la commande suivante :
 
 ```sql
-DROP TABLE imdb.movies ;
+DROP TABLE imdb.movies;
 ```
 
 ### Insertion de données
 Nous allons à présent insérer des données dans Cassandra :
 
 ```sql
-INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Shawshank Redemption', 'Frank Darabont',	1994,	1, 9.2, {'Crime', 'Drama'});
+INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Shawshank Redemption', 'Frank Darabont', 1994, 1, 9.2, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Godfather', 'Francis Ford Coppola', 1972, 2, 9.2, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Godfather: Part II', 'Francis Ford Coppola', 1974, 3, 9, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('Pulp Fiction', 'Quentin Tarantino', 1994, 4, 8.9, {'Crime', 'Drama'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('The Good, the Bad and the Ugly', 'Sergio Leone', 1966, 5, 8.9, {'Western'});
 INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('12 Angry Men', 'Sidney Lumet', 1957, 6, 8.9, {'Crime' ,'Drama'});
-INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('Schindler''s List', 'Steven Spielberg',	1993,	7, 8.9, {'Biography', 'Drama', 'History'});
+INSERT INTO imdb.movies (title, director, year, rank, rating, genres) VALUES ('Schindler''s List', 'Steven Spielberg', 1993, 7, 8.9, {'Biography', 'Drama', 'History'});
 ```
 
 ### Requêtes

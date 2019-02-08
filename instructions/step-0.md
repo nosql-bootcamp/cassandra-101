@@ -3,7 +3,7 @@ Nous allons maintenant installer Cassandra.
 
 ## Java
 
-Cassandra étant basée sur le langage Java, veillez à disposer de **Java 8** installé sur votre machine. Vous pouvez vérifier l'installation de Java à l'aide de la commande `java -version`.
+Cassandra étant basée sur le langage Java, veillez à disposer au minimum de **Java 8** installé sur votre machine. Vous pouvez vérifier l'installation de Java à l'aide de la commande `java -version`.
 
 ## Python
 
@@ -17,9 +17,9 @@ Si souhaitez vous passer de **Python**, vous pouvez installer Datastax DevCenter
 
 Téléchargez la dernière version de **Cassandra** à l'adresse suivante : http://cassandra.apache.org/download/. **Privilégiez la version `tar.gz`.**
 
-Ce workshop est basé sur la version `3.9`.
+Ce workshop est basé sur la version `3.11.3`.
 
-Pour installer Cassandra, dézippez l'archive dans le dossier de votre choix, par exemple `~/progs/apache-cassandra-3.9`.
+Pour installer Cassandra, dézippez l'archive dans le dossier de votre choix, par exemple `~/progs/apache-cassandra-3.11.3`.
 
 Pour démarrer Cassandra, lancez la commande suivante dans un terminal :
 
